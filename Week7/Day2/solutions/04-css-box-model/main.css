@@ -15,7 +15,9 @@ html, body {
 
 h1 {
     /* Your code here */
+    border: 2px solid red;
 }
+
 
 /* Phase 2 */
 
