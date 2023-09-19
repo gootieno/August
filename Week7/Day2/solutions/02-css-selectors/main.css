@@ -1,8 +1,37 @@
 /* Your code here */
-.tb {
-    border: 13px solid blue;
-    width: 500px;
+#page-title {
+    font-weight: bold;
 }
+
+.pagenum {
+    position: absolute;
+    right: 10px;
+    font-size: small;
+}
+
+p {
+    text-align: justify;
+    margin: .75em 0;
+}
+
+pre {
+    margin: 100px auto;
+    width: fit-content;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+pre > a {
+    color: black;
+}
+
 /* ===== DO NOT EDIT BELOW THIS COMMENT ===== */
 
 .noin {
@@ -152,3 +181,5 @@ h3, .bk7 {
 .ad2 {
     margin-left: 50%;
 }
+
+
