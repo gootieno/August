@@ -82,21 +82,56 @@ header {
     justify-content: center;
 }
 
+.image-demo {
+    width: 200px;
+    height: 200px;
+}
+
+.image-demo > img {
+    width: 100%;
+}
+
 /* ----- Phase 1 - Moderate Screen ----- */
 
 /* Your code here */
-@media screen and (min-width: 400px) and (max-width: 500px){
+@media screen and (min-width: 821px){
     .content {
-        border: 2px solid blue;
+        flex-direction: row;
     }
 }
 
 /* ----- Phase 1 - Wide Screen ----- */
 
 /* Your code here */
+@media screen and (min-width: 1220px) {
+    .page {
+        flex-direction: row;
+    }
+}
 
 /* ===== PRINTING ===== */
 
 /* Phase 2 */
 
 /* Your code here */
+@media print {
+    header, .sidebar {
+        display: none;
+        /* visibility: hidden; */
+    } 
+
+    .story-box {
+        padding: 0;
+        border-radius: 0;
+        background-color: white;
+        filter: none;
+    }
+
+    .image-box {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        width: 80px;
+
+    }
+}
