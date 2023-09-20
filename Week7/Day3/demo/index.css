@@ -1,0 +1,21 @@
+#parent {
+    display: flex;
+    
+    border: 2px solid black;
+    columns: 3;
+}
+
+.children {
+    height: 100px;
+    width: 100px;
+    border: 8px solid blue;
+    /* background-color: blue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-basis:50%;
+    flex-shrink: 0;
+    flex-grow: 0;
+    
+}
