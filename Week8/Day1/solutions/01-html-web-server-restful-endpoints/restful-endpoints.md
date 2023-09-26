@@ -1,0 +1,35 @@
+- Access the home page
+  - `GET /`
+  - `GET /home`
+- Submit a contact form
+  - `POST /contacts`
+- Access the posts page
+  - `GET /posts`
+- Access the edit page for a post
+  - `GET /posts/:postId/edit`
+- Access the create page for a post
+  - `GET /posts/create-page`
+- Create a new user
+  - `POST /users`
+- Log In
+  - `POST /log-in`
+- Log Out
+  - `POST /log-out`
+- Access the comments for a post page
+  - `GET /posts/:postId/comments`
+  - `GET /comments`
+- Access the create page for a post's comment
+  - `GET /comments/create`
+  - `GET /posts/:postId/comments/create`
+- Access the edit page for a comment
+  - `GET /comments/:commentId/edit` 
+- Submit a like for a post
+  - `POST /likes`
+  - `POST /posts/:postId/likes`
+- Delete a like for a post
+  - `POST /posts/:postId/likes/:likeId`
+- Access all the posts of a user
+  - `GET /users/:userId/posts`
+- Submit a search on posts
+  - `GET /posts/search`
+  - `POST /posts/search`
