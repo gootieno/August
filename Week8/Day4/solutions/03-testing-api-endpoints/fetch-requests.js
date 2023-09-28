@@ -11,7 +11,18 @@ Paste your code for fetch requests here once you finish each task.
 
 // Your code here
 
+const getPosts = () => {
+  return fetch("/posts")
+    .then((res) => res.json())
+    .then((resBody) => console.log(resBody));
+};
+getPosts();
 
+(async function () {
+  const res = await fetch("/posts");
+  const body = await res.json();
+  console.log(body);
+})();
 
 /* =============================== Phase 2 ================================ */
 /*
@@ -19,4 +30,15 @@ Paste your code for fetch requests here once you finish each task.
   components to the console.
 */
 
-// Your code here
+// Your code
+fetch("/posts", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify({
+    message: "New Post!",
+  }),
+})
+  .then((response) => response.json())
+  .then((data) => console.log(data));
