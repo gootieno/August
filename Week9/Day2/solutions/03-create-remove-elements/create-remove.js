@@ -7,6 +7,12 @@ add.addEventListener("click", async () => {
 
     const url = data.message; // URL of new dog image
     console.log("url ", url);
+
+    const urlParts = url.split("/");
+    console.log("url parts ", urlParts);
+
+    const breed = urlParts[4];
+    console.log("breed ", breed);
     /*--------------- Get breed (Hint: Parse from URL) ---------------- */
     // Your code here
 
@@ -27,12 +33,39 @@ add.addEventListener("click", async () => {
     // Your code here
 
     /*
-        create li, figure, image, and figcaption elements
-
-
+        1. create elements
+        2. give elements attributes/text value 
+        3. append the element to the dom
     */
+
+    const dogsListContainer = document.querySelector(".gallery > ul");
+    const listItem = document.createElement("li");
+    const figure = document.createElement("figure");
+    const img = document.createElement("img");
+    const figCaption = document.createElement("figcaption");
+
+    img.setAttribute("src", url);
+    figCaption.innerText = breed;
+    // listItem.style.border = '2px solid red'
+    listItem.classList.add("hover");
+
+    figure.append(img, figCaption);
+    listItem.appendChild(figure);
+
+    console.log(listItem);
+    dogsListContainer.appendChild(listItem);
   } catch (e) {
     console.log("Couldn't fetch dog :(");
+  }
+});
+
+const darkModeButton = document.querySelector("#dark-mode");
+darkModeButton.addEventListener("click", () => {
+    console.log(document.body.classList)
+  if (document.body.className.includes("dark-mode")) {
+    document.body.classList.remove("dark-mode");
+  } else {
+    document.body.classList.add("dark-mode");
   }
 });
 
@@ -43,6 +76,8 @@ removeFirst.addEventListener("click", () => {
   // Your code here
   /*-------------------- Remove the first dog card --------------------- */
   // Your code here
+
+  document.querySelector("ul").firstElementChild?.remove();
 });
 
 /************************** REMOVE LAST DOG BUTTON ***************************/
@@ -52,4 +87,7 @@ removeLast.addEventListener("click", () => {
   // Your code here
   /*-------------------- Remove the last dog card ----------------------- */
   // Your code here
+  document
+    .querySelectorAll("li")
+    [document.querySelectorAll("li").length - 1]?.remove();
 });
