@@ -12,7 +12,9 @@ export const createMainContent = () => {
     container.appendChild(h1);
     container.appendChild(img);
 
-    fetchImage();
+    fetchImage(); // returns url
+    
+    //code based on fetch image return value
 };
 
 const fetchImage = async () => {
