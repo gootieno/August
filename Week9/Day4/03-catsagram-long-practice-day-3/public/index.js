@@ -13,9 +13,9 @@ const initializePage = () => {
     document.body.appendChild(container);
 };
 
-window.onload = () => {
+window.onload = async () => {
     initializePage();
-    createMainContent();
+    await createMainContent();
     createScoreContainer();
     createCommentSection();
 };

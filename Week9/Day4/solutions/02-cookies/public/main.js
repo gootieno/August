@@ -39,7 +39,7 @@ const cookieParser = () => {
 function storeTheme(themeName) {
   // Your code here
 
-  document.cookie = `themeName=${themeName}`;
+  document.cookie = `themeName=${themeName};max-age=20`;
 }
 
 // For restoring theme from cookies, if selected by the user in the past
@@ -59,6 +59,7 @@ function restoreTheme() {
 function clearTheme() {
   // Your code here
   document.cookie = "themeName=;max-age=0";
+
 }
 
 /* ================================ PHASE 3 ================================ */
@@ -80,6 +81,7 @@ function restoreName() {
 // For clearing user's display name from cookies
 function clearName() {
   // Your code here
+  document.cookie = 'displayName=;max-age=0'
 }
 
 /* ========================================================================= */
